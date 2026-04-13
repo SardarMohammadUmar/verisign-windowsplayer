@@ -1,0 +1,36 @@
+{
+  "cmsApiBaseUrl": "https://brandvista.org/api",
+  "branding": {
+    "appTitle": "ArtLed player",
+    "faviconUrl": "artled-fevicon.png",
+    "logoUrl": "/logo-artled.png",
+    "logoText": "AR",
+    "pairingHeroUrl": "/bg-auth.jpg",
+    "noMediaHeroUrl": "/bg-auth.jpg",
+    "cmsRegisterHost": "app.brandvista.org",
+    "cmsAssignUrl": "https://brandvista.org/assign",
+    "assignHelpLabel": "brandvista.org/assign",
+    "theme": {
+      "primary": "#d6ad1c",
+      "primaryDark": "#a88e30",
+      "accent": "#ffd700",
+      "headingAccent": "#d6ad1c",
+      "surface": "rgba(255, 255, 255, 0.1)",
+      "text": "#ffffff",
+      "panelBg": "#1a1a1d"
+    }
+  },
+  "lastActiveIntervalMs": 60000,
+  "firebaseConfig": {
+    "apiKey": "AIzaSyBoVfzwxdTzb65abZ6Rd4UuRjLoHGMkNoA",
+    "authDomain": "brand-vista.firebaseapp.com",
+    "databaseURL": "https://brand-vista-default-rtdb.firebaseio.com",
+    "projectId": "brand-vista",
+    "storageBucket": "brand-vista.firebasestorage.app",
+    "messagingSenderId": "870684508459",
+    "appId": "1:870684508459:android:80b284565de74aa3ce456e"
+  },
+  "heartbeatInterval": 30000,
+  "mediaCachePath": "media-cache"
+}
+
