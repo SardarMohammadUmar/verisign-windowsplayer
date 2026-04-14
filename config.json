@@ -1,12 +1,12 @@
 {
   "cmsApiBaseUrl": "https://brandvista.org/api",
   "branding": {
-    "appTitle": "ArtLed player",
+    "appTitle": "artled-player",
     "faviconUrl": "artled-fevicon.png",
-    "logoUrl": "/logo-artled.png",
+    "logoUrl": "./logo-artled.png",
     "logoText": "AR",
-    "pairingHeroUrl": "/bg-auth.jpg",
-    "noMediaHeroUrl": "/bg-auth.jpg",
+    "pairingHeroUrl": "./bg-auth.jpg",
+    "noMediaHeroUrl": "./bg-auth.jpg",
     "cmsRegisterHost": "app.brandvista.org",
     "cmsAssignUrl": "https://brandvista.org/assign",
     "assignHelpLabel": "brandvista.org/assign",

@@ -1,7 +1,7 @@
 {
-  "name": "ArtLed player",
+  "name": "artLed-player",
   "version": "1.0.0",
-  "description": "Windows Digital Signage Player for ARTLED",
+  "description": "Windows Digital Signage Player for ART-LED",
   "main": "dist-electron/main.js",
   "type": "module",
   "scripts": {
@@ -41,7 +41,7 @@
   },
   "build": {
     "appId": "com.artled.player",
-    "productName": "ArtLed Player",
+    "productName": "artLed-player",
     "directories": {
       "output": "dist"
     },

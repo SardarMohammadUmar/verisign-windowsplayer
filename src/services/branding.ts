@@ -60,7 +60,10 @@ function mergeTheme(over?: Partial<BrandingTheme>): BrandingTheme {
 function normalizePublicPath(url: string): string {
   if (!url) return url;
   if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('//')) return url;
-  return url.startsWith('/') ? url : `/${url}`;
+  const cleaned = url.replace(/^\.?\//, '');
+  // Works in both dev ("/") and production file builds ("./")
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}${cleaned}`;
 }
 
 export function getBranding(): BrandingConfig {
