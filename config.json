@@ -9,7 +9,7 @@
     "noMediaHeroUrl": "./bg-auth.jpg",
     "cmsRegisterHost": "ds.artled.co.il",
     "cmsAssignUrl": "https://ds.artled.co.il/assign",
-    "assignHelpLabel": "brandvista.org/assign",
+    "assignHelpLabel": "ds.artled.co.il/assign",
     "theme": {
       "primary": "#d6ad1c",
       "primaryDark": "#a88e30",
