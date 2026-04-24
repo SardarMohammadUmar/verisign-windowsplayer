@@ -53,6 +53,24 @@ export function createScreenInFirebase(screenCode: string): Promise<void> {
   });
 }
 
+export function isScreenDataComplete(data: FirebaseScreen | null): boolean {
+  if (!data) return false;
+
+  return (
+    typeof data.screen_code === 'string' &&
+    data.screen_code.length > 0 &&
+    typeof data.remote_access_id === 'string' &&
+    data.remote_access_id.length > 0 &&
+    typeof data.connected === 'boolean' &&
+    typeof data.hasPlaylist === 'boolean' &&
+    typeof data.lastUpdated === 'number' &&
+    typeof data.status === 'string' &&
+    typeof data.name === 'string' &&
+    typeof data.location === 'string' &&
+    typeof data.playlistIds === 'string'
+  );
+}
+
 export type ScreenListenEvent = 'value' | 'removed' | 'listen_error';
 
 export function listenToScreenChanges(
@@ -123,11 +141,23 @@ export function updateScreenLastActive(screenCode: string): Promise<void> {
       return;
     }
 
-    const lastActiveRef = ref(database, `screens/${screenCode}/lastActive`);
-    set(lastActiveRef, Date.now())
-      .then(() => resolve())
+    const screenRef = ref(database, `screens/${screenCode}`);
+    get(screenRef)
+      .then((snapshot) => {
+        if (!snapshot.exists()) {
+          // Avoid creating partial screen records from heartbeat writes.
+          resolve();
+          return;
+        }
+
+        const lastActiveRef = ref(database, `screens/${screenCode}/lastActive`);
+        set(lastActiveRef, Date.now()).then(() => resolve()).catch((error) => {
+          console.warn('lastActive update skipped:', error);
+          resolve();
+        });
+      })
       .catch((error) => {
-        console.warn('lastActive update skipped:', error);
+        console.warn('lastActive existence check skipped:', error);
         resolve();
       });
   });
@@ -140,11 +170,25 @@ export function updateScreenOnlineStatus(screenCode: string, online: boolean): P
       return;
     }
 
-    const onlineRef = ref(database, `screens/${screenCode}/online`);
-    set(onlineRef, online)
-      .then(() => resolve())
+    const screenRef = ref(database, `screens/${screenCode}`);
+    get(screenRef)
+      .then((snapshot) => {
+        if (!snapshot.exists()) {
+          // Do not create incomplete records by writing a child field first.
+          resolve();
+          return;
+        }
+
+        const onlineRef = ref(database, `screens/${screenCode}/online`);
+        set(onlineRef, online)
+          .then(() => resolve())
+          .catch((error) => {
+            console.error('Error updating online status:', error);
+            reject(error);
+          });
+      })
       .catch((error) => {
-        console.error('Error updating online status:', error);
+        console.error('Error checking screen before online update:', error);
         reject(error);
       });
   });

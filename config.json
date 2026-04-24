@@ -1,5 +1,5 @@
 {
-  "cmsApiBaseUrl": "https://brandvista.org/api",
+  "cmsApiBaseUrl": "https://ds.artled.co.il/api",
   "branding": {
     "appTitle": "artled-player",
     "faviconUrl": "artled-fevicon.png",
@@ -7,8 +7,8 @@
     "logoText": "AR",
     "pairingHeroUrl": "./bg-auth.jpg",
     "noMediaHeroUrl": "./bg-auth.jpg",
-    "cmsRegisterHost": "app.brandvista.org",
-    "cmsAssignUrl": "https://brandvista.org/assign",
+    "cmsRegisterHost": "ds.artled.co.il",
+    "cmsAssignUrl": "https://ds.artled.co.il/assign",
     "assignHelpLabel": "brandvista.org/assign",
     "theme": {
       "primary": "#d6ad1c",
@@ -22,13 +22,13 @@
   },
   "lastActiveIntervalMs": 60000,
   "firebaseConfig": {
-    "apiKey": "AIzaSyBoVfzwxdTzb65abZ6Rd4UuRjLoHGMkNoA",
-    "authDomain": "brand-vista.firebaseapp.com",
-    "databaseURL": "https://brand-vista-default-rtdb.firebaseio.com",
-    "projectId": "brand-vista",
-    "storageBucket": "brand-vista.firebasestorage.app",
-    "messagingSenderId": "870684508459",
-    "appId": "1:870684508459:android:80b284565de74aa3ce456e"
+    "apiKey": "AIzaSyA5-DVN8rt0vsjkp5rWWAs0B5l7TdTee6U",
+    "authDomain": "signage-project-4071c.firebaseapp.com",
+    "databaseURL": "https://signage-project-4071c-default-rtdb.firebaseio.com",
+    "projectId": "signage-project-4071c",
+    "storageBucket": "signage-project-4071c.firebasestorage.app",
+    "messagingSenderId": "817100383917",
+    "appId": "1:817100383917:android:a73c48594e5a9b13b30824"
   },
   "heartbeatInterval": 30000,
   "mediaCachePath": "media-cache"

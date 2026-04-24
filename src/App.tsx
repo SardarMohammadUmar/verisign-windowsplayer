@@ -13,6 +13,7 @@ import {
   updateScreenConnected,
   updateScreenLastActive,
   updateScreenClearCache,
+  isScreenDataComplete,
   type ScreenListenEvent,
 } from './services/firebase';
 import { fetchScreenData, logError, ScreenNotFoundError } from './services/api';
@@ -90,12 +91,12 @@ function App() {
     init();
   }, []);
 
-  // Check if screen exists in Firebase
+  // Check if screen exists with expected registration payload.
   const checkScreenExists = async (code: string): Promise<boolean> => {
     try {
       const { getScreenData } = await import('./services/firebase');
       const data = await getScreenData(code);
-      return data !== null;
+      return isScreenDataComplete(data);
     } catch {
       return false;
     }
