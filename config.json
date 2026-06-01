@@ -1,34 +1,34 @@
 {
-  "cmsApiBaseUrl": "https://ds.artled.co.il/api",
+  "cmsApiBaseUrl": "http://87.101.225.134:6429/api",
   "branding": {
-    "appTitle": "artled-player",
-    "faviconUrl": "artled-fevicon.png",
-    "logoUrl": "./logo-artled.png",
-    "logoText": "AR",
+    "appTitle": "verisign-player",
+    "faviconUrl": "verisign-logo.png",
+    "logoUrl": "./verisign-logo.png",
+    "logoText": "VS",
     "pairingHeroUrl": "./bg-auth.jpg",
     "noMediaHeroUrl": "./bg-auth.jpg",
-    "cmsRegisterHost": "ds.artled.co.il",
-    "cmsAssignUrl": "https://ds.artled.co.il/assign",
-    "assignHelpLabel": "ds.artled.co.il/assign",
+    "cmsRegisterHost": "http://87.101.225.134:6429",
+    "cmsAssignUrl": "http://87.101.225.134:6429/displays/new",
+    "assignHelpLabel": "http://87.101.225.134:6429/displays/new",
     "theme": {
-      "primary": "#d6ad1c",
-      "primaryDark": "#a88e30",
+      "primary": "#e3a81f",
+      "primaryDark": "#e3a81f",
       "accent": "#ffd700",
       "headingAccent": "#d6ad1c",
       "surface": "rgba(255, 255, 255, 0.1)",
       "text": "#ffffff",
-      "panelBg": "#1a1a1d"
+      "panelBg": "#1f2937"
     }
   },
   "lastActiveIntervalMs": 60000,
   "firebaseConfig": {
-    "apiKey": "AIzaSyA5-DVN8rt0vsjkp5rWWAs0B5l7TdTee6U",
-    "authDomain": "signage-project-4071c.firebaseapp.com",
-    "databaseURL": "https://signage-project-4071c-default-rtdb.firebaseio.com",
-    "projectId": "signage-project-4071c",
-    "storageBucket": "signage-project-4071c.firebasestorage.app",
-    "messagingSenderId": "817100383917",
-    "appId": "1:817100383917:android:a73c48594e5a9b13b30824"
+    "apiKey": "AIzaSyCeklzLByeh7AqXJjqZnA08SF-bNzLrCjs",
+    "authDomain": "verisign-294d9.firebaseapp.com",
+    "databaseURL": "https://verisign-294d9-default-rtdb.firebaseio.com",
+    "projectId": "verisign-294d9",
+    "storageBucket": "verisign-294d9.firebasestorage.app",
+    "messagingSenderId": "619917945125",
+    "appId": "1:619917945125:web:5573c1b6eb415a23f9d2cc"
   },
   "heartbeatInterval": 30000,
   "mediaCachePath": "media-cache"

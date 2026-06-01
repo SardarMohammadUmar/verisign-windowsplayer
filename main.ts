@@ -13,8 +13,8 @@ const __dirname = dirname(__filename);
 /** Packaged app uses `dist/`; dev uses `public/`. */
 function resolveWindowIconPath(): string | undefined {
   const candidates = [
-    join(__dirname, '../public/artled-fevicon.png'),
-    join(__dirname, '../dist/artled-fevicon.png'),
+    join(__dirname, '../public/verisign-logo.png'),
+    join(__dirname, '../dist/verisign-logo.png'),
   ];
   for (const p of candidates) {
     if (existsSync(p)) return p;

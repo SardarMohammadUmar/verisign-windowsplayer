@@ -1,7 +1,7 @@
 {
-  "name": "artLed-player",
+  "name": "Verisign-player",
   "version": "1.0.0",
-  "description": "Windows Digital Signage Player for ART-LED",
+  "description": "Windows Digital Signage Player for Verisign",
   "main": "dist-electron/main.js",
   "type": "module",
   "scripts": {
@@ -40,14 +40,14 @@
     "react-dom": "^18.2.0"
   },
   "build": {
-    "appId": "com.artled.player",
-    "productName": "artLed-player",
+    "appId": "com.verisign.player",
+    "productName": "verisign-player",
     "directories": {
       "output": "dist"
     },
     "win": {
       "target": "nsis",
-      "icon": "build/artled-fevicon.ico",
+      "icon": "build/verisign-fevicon.ico",
       "artifactName": "${productName}-Setup-${version}.${ext}"
     },
     "nsis": {
